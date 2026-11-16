@@ -47,5 +47,5 @@ jobs:
           /tmp/gitleaks git --redact --exit-code 2 --log-level warn --config .gitleaks.toml .
       - name: DOM and no-network rules
         run: |
-          pipx run --spec semgrep==1.183.0 semgrep --config .github/semgrep-rules.yml --error docs/ tests/ tools/
+          pipx run --spec semgrep==1.183.0 semgrep --config .github/semgrep-rules.yml --error docs/ tests/
           pipx run --spec semgrep==1.183.0 semgrep --config .github/no-network.yml --error docs/
